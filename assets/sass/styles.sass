@@ -1,0 +1,354 @@
+//==================== Imports ====================
+@import "normalize"
+@import "skeleton"
+
+//==================== Vars ====================
+$acc : #3B8890
+
+//==================== Helpers ====================
+
+.left
+	text-align: left
+
+.right
+	text-align: right
+
+.light
+	font-weight: 200
+
+.btn
+	padding: 1rem 1.4rem
+	background-color: transparent
+	border-radius: 2rem
+	margin-left: 12px
+
+	&:nth-child(1)
+		margin-left: 0
+
+.sub-title
+	text-align: center
+	margin: 0 auto
+	padding-top: 2rem
+	text-transform: uppercase
+	font-weight: 700
+	color: #71AA9B
+
+	&:after
+		display: block
+		content: ''
+		width: 20%
+		height: 2px
+		background-color: #71AA9B
+		margin: .8rem auto 1rem
+
+section
+	padding-top: 6rem
+	background-color: #F9F9F9
+
+.page-lead
+	text-align: center
+	font-weight: 700
+	text-transform: uppercase
+
+.card
+	width: 100%
+	padding: 1rem
+	border-bottom: 4px solid transparent
+	transition: all .6s ease-in-out
+
+	&:hover
+		color: #212121
+		border-bottom: 4px solid $acc
+
+
+body
+	background-color: #F9F9F9
+	color: #64777D
+
+//==================== Header ====================
+header
+	text-align: center
+
+	.header-bar
+		box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.6)
+	
+		.brand
+			text-align: left
+			margin: 1rem 0
+
+			img
+				width: 50%
+
+		.sns
+
+			ul
+				list-style: none
+				margin-bottom: 0
+
+				li
+					display: inline-block
+					margin: 1rem 2rem
+					font-size: 2em
+					color: $acc
+
+		.cta
+			text-align: right
+			margin: 1rem 0
+
+			.btn
+				text-align: center
+				background-color: #FAFAFA
+				color: $acc
+				text-decoration: none
+				font-weight: 700
+				text-transform: uppercase
+				display: inline-block
+				border: 1px solid $acc
+				width: 35%
+				margin-left: 1em
+				font-size: .8em
+				padding: 1rem
+				transition: all .4s ease-in-out
+
+				&:first-child
+					margin-left: 0
+
+				&:hover
+					color: #FAFAFA
+					background-color: $acc
+
+//==================== Slider ====================
+.slider-container
+	width: 100%
+	height: 50vh
+	height: 80vh
+	overflow: hidden
+	text-align: left
+
+	.slider
+		width: 100%
+		background: linear-gradient(rgba(#DBB13B, .6), rgba(#2494A2, .4))
+		z-index: 10
+		height: 100%
+
+		.slides
+			width: calc(1920px * 7)
+			list-style: none
+
+			.slide
+				display: inline-block
+				margin: 0
+				width: 100%
+				display: inline-block
+
+				img
+					margin: 0
+					z-index: -1
+					position: relative
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+
+//==================== Navbar ====================
+.main-nav
+	text-align: center
+	background-color: #009688
+	padding: 2rem
+
+	.nav-item
+		width: 100%
+		overflow: hidden
+		letter-spacing: .1rem
+
+	.nav-btn
+		background-color: transparent
+		margin-left: 12px
+		color: rgba(255, 255, 255, .7)
+		text-decoration: none
+		text-transform: uppercase
+		text-align: center
+		font-weight: 600
+		border-bottom: solid 2px transparent
+		transition: all .4s ease-in-out
+
+		&:after
+			display: block
+			content: ''
+			margin: 1em auto 0
+			width: 0%
+			height: 2px
+			background-color: #FAFAFA
+			transition: all .4s ease-in-out
+
+		&:hover
+			color: #FFF
+
+			&:after
+				width: 60%
+
+
+		&:nth-child(1)
+			margin-left: 0
+
+//==================== Home ====================
+.home
+	margin-top: 2rem
+
+	.home-pre
+		text-align: center
+
+//==================== Video ====================
+.section-video
+	background: radial-gradient(circle, #FAFAFA, #DEE6DD)
+
+	.video-container
+		margin-top: 6rem
+		position: relative
+		height: 0
+		padding-bottom: 56.25%
+		padding-top: 25px
+
+		.video
+			iframe
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+
+//==================== About ====================
+.section-about
+	background-color: #FAFAFA
+	padding: 4rem 0
+
+	.about
+		width: 80%
+		margin: 0 auto
+		font-weight: 300
+		text-align: center
+
+//==================== Grass ====================
+.section-grass
+	background-color: #FFF
+
+	h4
+		font-size: 1.3em
+
+	p
+		font-size .8em
+		font-weight: 300
+
+	.grass 
+		img
+			width: 100%
+			margin: 0 auto
+
+//==================== Service ====================
+.product
+
+	.service-description
+		transform: translateY(60px)
+
+		.service-title
+			text-align: center
+
+			&:after
+				content: ''
+				display: block
+				background-color: $acc
+				width: 0
+				height: 2px
+				margin: 1rem auto
+				transition: all .4s ease-in-out
+			
+			&:hover
+				color: $acc
+
+				&:after
+					width: 80%
+		p
+			font-weight: 100
+
+	.bg-cl
+		background: radial-gradient(circle at bottom, #DEE6DD, #F9F9F9)
+			position: bottom
+
+	.img-group
+		position: relative
+		margin-bottom: 22rem
+		width: 100%
+
+		img
+			max-width: 100%
+
+		.service-img-1,
+		.service-img-2
+			position: relative
+			padding: 1rem
+			background-color: #FAFAFA
+			box-shadow: 4px 4px 12px rgba(0, 0, 0, .3)
+
+	.lay-l
+		text-align: right
+
+		.service-img-1
+			top: 60px
+			left: 120px
+			z-index: 2
+
+		.service-img-2
+			top: 0
+			right: 0
+
+	.lay-r
+		.service-img-1
+			top: 0
+			left: 0
+
+		.service-img-2
+			top: -60px
+			left: -120px
+			z-index: 2
+
+//==================== footer ====================
+footer
+	margin-top: 50px
+	padding: 4rem 0
+	background-color: #002d26
+	color: #FAFAFA
+	text-align: center
+
+	.footer-title
+		text-transform: uppercase
+		font-size: 1.2em
+		font-weight: 400
+		letter-spacing: .04em
+
+		&:after
+			display: block
+			content: ''
+			width: 40%
+			height: 1px
+			background-color: #CCC
+			margin: 8px auto
+
+	.footer-content
+		text-align: center
+
+	.footer-icon
+		color: #CCC
+		font-size: 2em
+		margin-left: 12px
+		transition: all .6s ease-in-out
+
+		&:nth-child(1)
+			margin-left: 0
+		
+		&:hover
+			color: #FFF
+
+	.footer-link
+		color: #CCC
+		margin-left: 12px
+		transition: all .6s ease-in-out

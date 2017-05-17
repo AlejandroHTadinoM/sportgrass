@@ -1,0 +1,20 @@
+extends _includes/layout.pug
+block content
+
+	section.contact#contact
+		.container
+			h3.sub-title contactos
+			.row
+				form(action="process.php", id="formulario", method="POST")
+					.four.columns
+						label(for="nombre") Nombre
+						input(type="text", required, name="nombre", placeholder="Inserte su nombre")
+						label(for="email") Asunto
+						input(type="text", required, placeholder="Inserte el asunto del mensaje", name="asunto")
+						label(for="email") E-mail
+						input(type="email", required, placeholder="Ingrese su dirección de E-mail", name="email")
+					.eight.columns
+						label(for="email") Mensaje
+						textarea(name="mensaje", rows="4", required placeholder="Deje su mensaje")
+						input(type="reset", class="reset", value="Borrar Todo").contact-btn
+						input(type="submit", class="enviar", value="Enviar").contact-btn
