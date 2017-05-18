@@ -1,25 +1,40 @@
 //- Header ========================================
 header.main-header
 	.header-bar
+		a(href="#")#open
+			span#open-icon
+		.menu
+			a(href="#")#close
+
+			ul
+				a(href="./product.html")
+					li productos
+				a(href="./evergreen.html")
+					li evergreen
+				a(href="./gallery.html")
+					li galeria
+				a(href="./contact.html")
+					li contacto
+
 		.container
 			.row
-				.four.columns
+				.two.columns
 					.brand
 						a(href="./index.html")
 							img(src="img/logo-no-bg.png")
-				.four.columns
+				.five.columns
 					.sns
-						ul
+						ul <span class="bar">Nuestras redes</span>
 							a(href="//www.facebook.com/sgsportgrassintl/")
-								li 
+								li#facebook-icon
 									i(class="fa fa-facebook-square" aria-hidden="true")
 							a(href="//www.youtube.com/watch?v=JS6BQRllzc4")
-								li 
+								li#youtube-icon
 									i(class="fa fa-youtube-play" aria-hidden="true")
 							a(href="//twitter.com/sgsportgrass")
-								li 
+								li#twitter-icon
 									i(class="fa fa-twitter-square" aria-hidden="true")
-				.four.columns
+				.five.columns
 					.cta
 						a.btn(href="cel:(+502)-506-45-207") llamenos
 						a.btn(href="#") contacto

@@ -22,7 +22,7 @@ var jsDest = 'dist/js/';
 
 /*********** HTML teplating and compiling ***********/
 gulp.task('jade', function () {
-	return gulp.src('views/*.jade')
+	return gulp.src('views/**/*.jade')
 		.pipe(jade({
 			pretty: false
 		}))
@@ -30,7 +30,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('pug', function () {
-	return gulp.src('views/*.pug')
+	return gulp.src('views/**/*.pug')
 		.pipe(pug({
 			pretty: false
 		}))

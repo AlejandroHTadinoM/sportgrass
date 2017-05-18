@@ -22,6 +22,7 @@ function parallax (e, s) {
 		'top' : -((fScroll / steep) + s)
 	});
 };
+navBar.wrap('<div class="wrapper"></div>');
 $(window).scroll(function () {
 	wScroll = $(this).scrollTop();
 	if (wScroll < (service1.offset().top)) {
@@ -50,5 +51,10 @@ $(window).scroll(function () {
 	};
 	if (wScroll < (service8.offset().top)) {
 		parallax(service8, 140);
+	};
+	if (wScroll > navPos) {
+		navBar.addClass('stk');
+	} else {
+		navBar.removeClass('stk');
 	};
 });

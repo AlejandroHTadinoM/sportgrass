@@ -810,26 +810,19 @@ hr {
   display: table;
   clear: both; }
 
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-/* Larger than mobile */
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
-.left {
+.menu {
+  display: none; }
+
+.text-left {
   text-align: left; }
 
-.right {
+.text-right {
   text-align: right; }
 
-.light {
+.text-center {
+  text-align: center; }
+
+.text-light {
   font-weight: 200; }
 
 .btn {
@@ -867,11 +860,25 @@ section {
 .card {
   width: 100%;
   padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   border-bottom: 4px solid transparent;
   transition: all .6s ease-in-out; }
   .card:hover {
     color: #212121;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
     border-bottom: 4px solid #3B8890; }
+
+.stk {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.4); }
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 999; }
 
 body {
   background-color: #F9F9F9;
@@ -880,23 +887,34 @@ body {
 header {
   text-align: center; }
   header .header-bar {
-    box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, 0.6); }
+    background-color: #FAFAFA; }
     header .header-bar .brand {
       text-align: left;
       margin: 1rem 0; }
       header .header-bar .brand img {
-        width: 50%; }
+        width: 100%; }
     header .header-bar .sns ul {
       list-style: none;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      font-size: 1.2em; }
       header .header-bar .sns ul li {
         display: inline-block;
-        margin: 1rem 2rem;
-        font-size: 2em;
-        color: #3B8890; }
+        margin-left: 1rem;
+        font-size: 2em; }
+      header .header-bar .sns ul #facebook-icon {
+        color: #3b5998; }
+      header .header-bar .sns ul #youtube-icon {
+        color: #e52d27; }
+      header .header-bar .sns ul #twitetr-icon {
+        color: #326ada; }
+    header .header-bar .sns .bar {
+      display: inline-block;
+      border-right: 1px solid #3B8890;
+      padding-right: 1rem;
+      height: 100%; }
     header .header-bar .cta {
       text-align: right;
-      margin: 1rem 0; }
+      margin: 1.5rem 0 0 0; }
       header .header-bar .cta .btn {
         text-align: center;
         background-color: #FAFAFA;
@@ -1008,7 +1026,10 @@ header {
     text-align: center; }
 
 .section-grass {
-  background-color: #FFF; }
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url("../img/section-bg.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; }
   .section-grass h4 {
     font-size: 1.3em; }
   .section-grass p {
@@ -1105,3 +1126,130 @@ footer {
     color: #CCC;
     margin-left: 12px;
     transition: all .6s ease-in-out; }
+
+/* Larger than mobile */
+@media (max-width: 425px) {
+  #open {
+    content: '';
+    top: 2rem;
+    right: 2rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 2rem; }
+    #open #open-icon {
+      background: #212121;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 3rem;
+      height: 4px;
+      border-radius: .75rem; }
+      #open #open-icon:after, #open #open-icon:before {
+        background: #212121;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 3rem;
+        height: 4px;
+        border-radius: .75rem; }
+      #open #open-icon:after {
+        margin-top: 1rem; }
+      #open #open-icon:before {
+        margin-top: 2rem; }
+  .menu {
+    transform: translateX(-100%);
+    z-index: 9999;
+    display: inline-block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding-top: 4rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all .6s ease-in-out; }
+    .menu #close:after, .menu #close:before {
+      background: #212121;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 3rem;
+      height: 4px;
+      border-radius: .75rem; }
+    .menu #close:after {
+      transform: rotate(-45deg); }
+    .menu #close:before {
+      transform: rotate(45deg); }
+    .menu ul {
+      list-style: none;
+      font-size: 2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 2rem; }
+      .menu ul a {
+        text-decoration: none;
+        color: #3B8890; }
+        .menu ul a li {
+          padding: .5rem; }
+  header .header-bar .sns,
+  header .header-bar .cta {
+    display: none; }
+  header .header-bar .brand {
+    margin: 1re 0 0; }
+    header .header-bar .brand img {
+      width: 50%; }
+  .main-nav {
+    display: none; }
+  .card {
+    padding: 2rem;
+    margin: 0 auto 4rem;
+    text-align: center;
+    width: 90%; }
+  .product .img-group img {
+    width: 280px; }
+  .product .lay-l .service-img-1 {
+    top: 60px;
+    left: 0; }
+  .product .lay-l .service-img-2 {
+    top: 0;
+    left: -60px; }
+  .product .lay-r .service-img-2 {
+    left: 60px; }
+  .product .bg-img .service-description {
+    transform: translateY(-200px); }
+  footer .footer-content {
+    margin-bottom: 2rem; } }
+
+/* Larger than tablet */
+@media (max-width: 768px) {
+  .product .img-group img {
+    width: 280px; }
+  .product .lay-l .service-img-1 {
+    top: 60px;
+    left: 0; }
+  .product .lay-l .service-img-2 {
+    top: 0;
+    left: -60px; }
+  .product .lay-r .service-img-1 {
+    top: 60px; }
+  .product .lay-r .service-img-2 {
+    left: 60px; } }
+
+@media (max-width: 1024px) {
+  .product .img-group img {
+    width: 280px; }
+  .product .lay-l .service-img-1 {
+    top: 60px;
+    left: 0; }
+  .product .lay-l .service-img-2 {
+    top: 0;
+    left: -60px; }
+  .product .lay-r .service-img-1 {
+    top: 60px; }
+  .product .lay-r .service-img-2 {
+    left: 60px; } }

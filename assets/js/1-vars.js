@@ -12,6 +12,14 @@ var
 	slide = slides.find('.slide'),
 	slideImg = slide.find('img');
 
+	navBar = $('.header-bar'),
+	navPos = navBar.offset().top,
+	$('.wrapper').height(navBar.height()),
+
+	menu = $('.menu'),
+	closeMenu = menu.find('#close'),
+	openMenu = navBar.find('#open-icon'),
+
 	// Parallax section --------------------
 	product = $('.product'),
 	service = $('.service'),

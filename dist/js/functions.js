@@ -12,6 +12,14 @@ var
 	slide = slides.find('.slide'),
 	slideImg = slide.find('img');
 
+	navBar = $('.header-bar'),
+	navPos = navBar.offset().top,
+	$('.wrapper').height(navBar.height()),
+
+	menu = $('.menu'),
+	closeMenu = menu.find('#close'),
+	openMenu = navBar.find('#open-icon'),
+
 	// Parallax section --------------------
 	product = $('.product'),
 	service = $('.service'),
@@ -99,6 +107,7 @@ function parallax (e, s) {
 		'top' : -((fScroll / steep) + s)
 	});
 };
+navBar.wrap('<div class="wrapper"></div>');
 $(window).scroll(function () {
 	wScroll = $(this).scrollTop();
 	if (wScroll < (service1.offset().top)) {
@@ -128,4 +137,19 @@ $(window).scroll(function () {
 	if (wScroll < (service8.offset().top)) {
 		parallax(service8, 140);
 	};
+	if (wScroll > navPos) {
+		navBar.addClass('stk');
+	} else {
+		navBar.removeClass('stk');
+	};
+});
+openMenu.click(function () {
+	menu.css({
+		'transform' : 'translateX(0%)'
+	});
+});
+closeMenu.click(function () {
+	menu.css({
+		'transform' : 'translateX(-100%)'
+	});
 });
