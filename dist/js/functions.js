@@ -77,12 +77,15 @@ startSlider();
 grass.css({
 	'transform' : 'translate(0, ' + ((grassSecH / 2) - (grassH)) + 'px)'
 });
-var heights = $(".card").map(function() {		        
+function cardHeight () {
+	var heights = $(".height").map(function() {		        
 			return $(this).height();		   
 		})
 	.get(),
 	maxHeight = Math.max.apply(null, heights);
-	$(".card").height(maxHeight);
+	$(".height").height(maxHeight);
+};
+$(window).resize(cardHeight());
 function findImg1 (e) {
 	img1 = e.find('.service-img-1');
 	return img1;
@@ -108,35 +111,38 @@ function parallax (e, s) {
 	});
 };
 navBar.wrap('<div class="wrapper"></div>');
+
 $(window).scroll(function () {
 	wScroll = $(this).scrollTop();
-	if (wScroll < (service1.offset().top)) {
-		parallax(service1, 140);
-	};
-	if (wScroll < (service2.offset().top)) {
-		parallax(service2, 140);
-	};
-	if (wScroll < (service3.offset().top)) {
-		parallax(service3, 140);
-	};
-	if (wScroll < (service3.offset().top)) {
-		parallax(service3, 140);
-	};
-	if (wScroll < (service4.offset().top)) {
-		parallax(service4, 140);
-	};
-	if (wScroll < (service5.offset().top)) {
-		parallax(service5, 140);
-	};
-	if (wScroll < (service6.offset().top)) {
-		parallax(service6, 140);
-	};
-	if (wScroll < (service7.offset().top)) {
-		parallax(service7, 140);
-	};
-	if (wScroll < (service8.offset().top)) {
-		parallax(service8, 140);
-	};
+	if (service.length) {
+		if (wScroll < (service1.offset().top)) {
+			parallax(service1, 140);
+		};
+		if (wScroll < (service2.offset().top)) {
+			parallax(service2, 140);
+		};
+		if (wScroll < (service3.offset().top)) {
+			parallax(service3, 140);
+		};
+		if (wScroll < (service3.offset().top)) {
+			parallax(service3, 140);
+		};
+		if (wScroll < (service4.offset().top)) {
+			parallax(service4, 140);
+		};
+		if (wScroll < (service5.offset().top)) {
+			parallax(service5, 140);
+		};
+		if (wScroll < (service6.offset().top)) {
+			parallax(service6, 140);
+		};
+		if (wScroll < (service7.offset().top)) {
+			parallax(service7, 140);
+		};
+		if (wScroll < (service8.offset().top)) {
+			parallax(service8, 140);
+		};
+	}
 	if (wScroll > navPos) {
 		navBar.addClass('stk');
 	} else {

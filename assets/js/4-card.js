@@ -1,6 +1,9 @@
-var heights = $(".card").map(function() {		        
+function cardHeight () {
+	var heights = $(".height").map(function() {		        
 			return $(this).height();		   
 		})
 	.get(),
 	maxHeight = Math.max.apply(null, heights);
-	$(".card").height(maxHeight);
+	$(".height").height(maxHeight);
+};
+$(window).resize(cardHeight());

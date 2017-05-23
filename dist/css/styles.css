@@ -858,9 +858,9 @@ section {
   text-transform: uppercase; }
 
 .card {
+  box-sizing: border-box;
   width: 100%;
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 3rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   border-bottom: 4px solid transparent;
   transition: all .6s ease-in-out; }
@@ -1040,6 +1040,8 @@ header {
 
 .product .service-description {
   transform: translateY(60px); }
+  .product .service-description p {
+    margin-bottom: 1rem; }
   .product .service-description .service-title {
     text-align: center; }
     .product .service-description .service-title:after {
@@ -1211,7 +1213,7 @@ footer {
     text-align: center;
     width: 90%; }
   .product .img-group img {
-    width: 280px; }
+    width: 140px; }
   .product .lay-l .service-img-1 {
     top: 60px;
     left: 0; }
@@ -1228,7 +1230,7 @@ footer {
 /* Larger than tablet */
 @media (max-width: 768px) {
   .product .img-group img {
-    width: 280px; }
+    width: 140px; }
   .product .lay-l .service-img-1 {
     top: 60px;
     left: 0; }
