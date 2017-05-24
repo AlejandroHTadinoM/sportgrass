@@ -1,3 +1,29 @@
 extends _includes/layout.pug
 block content
-	h1 gallery
+
+	//- Mixin ========================================
+	mixin imgGallery(title, des, img, i)
+		figure(id=i)
+			img(src=img).gallery-img
+			figcaption
+				h4.gallery-title= title
+				p.galery-description= des
+
+	//- Gallery ========================================
+	section.gallery
+		.modal
+			.container
+				.row
+					.twelve.columns
+						img(src="https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg").modal-img
+		.container
+			.row
+				.three.columns
+					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg", 0)
+				.three.columns
+					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/latest-1080-wallpaper.jpg", 1)
+				.three.columns
+					+imgGallery("imagen 1", "descripcion 1", "http://www.uniwallpaper.com/static/images/eWtfMME_jJm8t1k.png", 2)
+				.three.columns
+					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg", 3)
+			

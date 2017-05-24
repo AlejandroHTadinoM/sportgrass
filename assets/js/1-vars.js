@@ -30,7 +30,13 @@ var
 	service5 = product.find('#service5'),
 	service6 = product.find('#service6'),
 	service7 = product.find('#service7'),
-	service8 = product.find('#service8');
+	service8 = product.find('#service8'),
+
+// Modal --------------------
+	gallery = $('.gallery'),
+	figure = gallery.find('figure'),
+	modal = $('.modal'),
+	modalImg = $('.modal-img');
 
 // settings for slider
 var

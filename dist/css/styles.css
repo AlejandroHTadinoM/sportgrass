@@ -884,6 +884,19 @@ body {
   background-color: #F9F9F9;
   color: #64777D; }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #212121;
+  padding-top: 100px; }
+  .modal img {
+    width: 100%; }
+
 header {
   text-align: center; }
   header .header-bar {
@@ -1094,6 +1107,43 @@ header {
   top: -60px;
   left: -120px;
   z-index: 2; }
+
+.gallery {
+  background-color: pink; }
+  .gallery figure {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: 0; }
+    .gallery figure:hover img {
+      filter: blur(1px);
+      transform: scale(0.96); }
+    .gallery figure:hover figcaption {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      opacity: 1; }
+    .gallery figure img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .3s ease-in-out; }
+    .gallery figure figcaption {
+      box-sizing: border-box;
+      background-color: #FAFAFA;
+      padding: 1rem;
+      text-align: center;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 0;
+      opacity: 0;
+      height: 100%;
+      transition: all .4s ease-in-out; }
 
 footer {
   margin-top: 50px;
