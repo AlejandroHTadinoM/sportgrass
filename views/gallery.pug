@@ -2,9 +2,9 @@ extends _includes/layout.pug
 block content
 
 	//- Mixin ========================================
-	mixin imgGallery(title, des, img, i)
-		figure(id=i)
-			img(src=img).gallery-img
+	mixin imgGallery(title, des, imgMin, imgFull)
+		figure
+			img(src=imgMin, data-image=imgFull).gallery-img
 			figcaption
 				h4.gallery-title= title
 				p.galery-description= des
@@ -15,25 +15,26 @@ block content
 			.container
 				.row
 					.twelve.columns
-						img(src="https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg").modal-img
+						.modal-container
+							img(src="").modal-img
+							p.modal-text para cerrar haga click.
 		.container
 			.row
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg", 0)
+					+imgGallery("imagen 1", "descripcion 1", "img/gallery/thumbs/thumb-1.jpg", "img/gallery/img-gallery-1.jpg")
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/latest-1080-wallpaper.jpg", 1)
+					+imgGallery("imagen 2", "descripcion 2", "img/gallery/thumbs/thumb-2.jpg", "img/gallery/img-gallery-2.jpg")
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "http://www.uniwallpaper.com/static/images/eWtfMME_jJm8t1k.png", 2)
+					+imgGallery("imagen 3", "descripcion 3", "img/gallery/thumbs/thumb-3.jpg", "img/gallery/img-gallery-3.jpg")
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg", 3)
-		.container
+					+imgGallery("imagen 4", "descripcion 4", "img/gallery/thumbs/thumb-4.jpg", "img/gallery/img-gallery-4.jpg")
 			.row
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg", 0)
+					+imgGallery("imagen 1", "descripcion 1", "img/gallery/thumbs/thumb-1.jpg", "img/gallery/img-gallery-1.jpg")
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/latest-1080-wallpaper.jpg", 1)
+					+imgGallery("imagen 2", "descripcion 2", "img/gallery/thumbs/thumb-2.jpg", "img/gallery/img-gallery-2.jpg")
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "http://www.uniwallpaper.com/static/images/eWtfMME_jJm8t1k.png", 2)
+					+imgGallery("imagen 3", "descripcion 3", "img/gallery/thumbs/thumb-3.jpg", "img/gallery/img-gallery-3.jpg")
 				.three.columns
-					+imgGallery("imagen 1", "descripcion 1", "https://www.qdtricks.net/wp-content/uploads/2016/05/hd-road-wallpaper.jpg", 3)
+					+imgGallery("imagen 4", "descripcion 4", "img/gallery/thumbs/thumb-4.jpg", "img/gallery/img-gallery-4.jpg")
 			

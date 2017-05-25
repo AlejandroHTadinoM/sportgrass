@@ -95,9 +95,21 @@ body
 	z-index: 2
 	background: #212121
 	padding-top: 100px
+	cursor: pointer
 
-	img
+	.modal-container
 		width: 100%
+		text-align: center
+
+		img
+			width: 90%
+			margin: 0 auto
+			
+
+		p
+			color: #FAFAFA
+			text-align: center
+			text-transform: uppercase
 
 //==================== Header ====================
 header
@@ -368,21 +380,21 @@ header
 
 //==================== Gallery ====================
 .gallery
-	background-color: pink
+	background-color: #F9F9F9
 
 	figure
+		margin: 2rem 0
 		width: 100%
 		height: 200px
 		overflow: hidden
 		position: relative
 		cursor: pointer
-		margin: 0
 
 		&:hover
 
 			img
 				filter: blur(1px)
-				transform: scale(.96)
+				transform: scale(.98)
 
 			figcaption
 				top: 50%

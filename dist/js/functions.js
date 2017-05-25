@@ -166,8 +166,7 @@ closeMenu.click(function () {
 	});
 });
 figure.click(function () {
-	console.log($(this).attr('id'));
-	showModal($(this), $(this).find('img'));
+	showModal($(this).find('img'));
 	modal.click(function () {
 		closeModal($(this));
 	});
@@ -175,8 +174,8 @@ figure.click(function () {
 
 modal.click(closeModal($(this)));
 
-function showModal(e, img) {
-	var imgSrc = img.attr('src');
+function showModal(img) {
+	var imgSrc = img.data('image');
 	console.log(imgSrc);
 	modal.fadeIn('slow', function () {
 		modalImg.attr('src', imgSrc);
