@@ -48,7 +48,6 @@ var
 var
 	wScroll,
 	steep = 4;
-
 function resizeImg () {
 	slide.width(sliderContainer.width());
 	slide.height(sliderContainer.height());
@@ -171,17 +170,12 @@ figure.click(function () {
 		closeModal($(this));
 	});
 });
-
-modal.click(closeModal($(this)));
-
 function showModal(img) {
 	var imgSrc = img.data('image');
-	console.log(imgSrc);
 	modal.fadeIn('slow', function () {
 		modalImg.attr('src', imgSrc);
 	});
 };
-
 function closeModal (e) {
 	e.fadeOut();
 };

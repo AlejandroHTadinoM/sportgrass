@@ -863,7 +863,7 @@ section {
   padding: 3rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
   border-bottom: 4px solid transparent;
-  transition: all .6s ease-in-out; }
+  transition: all .4s ease-in-out; }
   .card:hover {
     color: #212121;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
