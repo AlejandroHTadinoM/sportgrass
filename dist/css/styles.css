@@ -915,25 +915,29 @@ header {
       margin: 1rem 0; }
       header .header-bar .brand img {
         width: 100%; }
-    header .header-bar .sns ul {
-      list-style: none;
-      margin-bottom: 0;
-      font-size: 1.2em; }
-      header .header-bar .sns ul li {
+    header .header-bar .sns {
+      margin-top: 1rem; }
+      header .header-bar .sns ul {
+        list-style: none;
+        margin-bottom: 0;
+        font-size: 1.2em; }
+        header .header-bar .sns ul li {
+          display: inline-block;
+          margin-left: 1rem;
+          font-size: 2em;
+          vertical-align: -.7rem;
+          vertical-align: -webkit-baseline-middle; }
+        header .header-bar .sns ul #facebook-icon {
+          color: #3b5998; }
+        header .header-bar .sns ul #youtube-icon {
+          color: #e52d27; }
+        header .header-bar .sns ul #twitetr-icon {
+          color: #326ada; }
+      header .header-bar .sns .bar {
         display: inline-block;
-        margin-left: 1rem;
-        font-size: 2em; }
-      header .header-bar .sns ul #facebook-icon {
-        color: #3b5998; }
-      header .header-bar .sns ul #youtube-icon {
-        color: #e52d27; }
-      header .header-bar .sns ul #twitetr-icon {
-        color: #326ada; }
-    header .header-bar .sns .bar {
-      display: inline-block;
-      border-right: 1px solid #3B8890;
-      padding-right: 1rem;
-      height: 100%; }
+        border-right: 1px solid #3B8890;
+        padding-right: 1rem;
+        height: 100%; }
     header .header-bar .cta {
       text-align: right;
       margin: 1.5rem 0 0 0; }
@@ -1154,8 +1158,20 @@ header {
       height: 100%;
       transition: all .4s ease-in-out; }
 
+.evergreen .eg-text {
+  text-align: center; }
+  .evergreen .eg-text h2 {
+    font-size: 2em;
+    font-weight: 400; }
+
+.bg-img {
+  background-color: #F9F9F9;
+  background: radial-gradient(circle, rgba(222, 230, 221, 0.9), rgba(249, 249, 249, 0.8)), url("/img/section-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; }
+
 footer {
-  margin-top: 50px;
   padding: 4rem 0;
   background-color: #002d26;
   color: #FAFAFA;
@@ -1185,7 +1201,6 @@ footer {
       color: #FFF; }
   footer .footer-link {
     color: #CCC;
-    margin-left: 12px;
     transition: all .6s ease-in-out; }
 
 /* Larger than mobile */

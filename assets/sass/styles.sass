@@ -126,6 +126,7 @@ header
 				width: 100%
 
 		.sns
+			margin-top: 1rem
 
 			ul
 				list-style: none
@@ -136,6 +137,8 @@ header
 					display: inline-block
 					margin-left: 1rem
 					font-size: 2em
+					vertical-align: -.7rem
+					vertical-align: -webkit-baseline-middle
 
 				#facebook-icon
 					color: #3b5998
@@ -424,8 +427,23 @@ header
 			transition: all .4s ease-in-out
 
 //==================== footer ====================
+.evergreen
+	.eg-text
+		text-align: center
+
+		h2
+			font-size: 2em
+			font-weight: 400
+
+.bg-img
+	background-color: #F9F9F9
+	background: radial-gradient(circle, rgba(#DEE6DD, .9), rgba(#F9F9F9, .8)), url("/img/section-bg.jpg")
+		size: cover
+		position: center
+		attachment: fixed
+
+//==================== footer ====================
 footer
-	margin-top: 50px
 	padding: 4rem 0
 	background-color: #002d26
 	color: #FAFAFA
@@ -462,7 +480,6 @@ footer
 
 	.footer-link
 		color: #CCC
-		margin-left: 12px
 		transition: all .6s ease-in-out
 
 /* Larger than mobile */
