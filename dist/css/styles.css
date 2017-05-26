@@ -1166,10 +1166,11 @@ header {
 
 .bg-img {
   background-color: #F9F9F9;
-  background: radial-gradient(circle, rgba(222, 230, 221, 0.9), rgba(249, 249, 249, 0.8)), url("/img/section-bg.jpg");
+  background: radial-gradient(circle, rgba(222, 230, 221, 0.9), rgba(249, 249, 249, 0.4)), url("/img/section-bg.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; }
+    background-attachment: fixed;
+  color: #444; }
 
 footer {
   padding: 4rem 0;
