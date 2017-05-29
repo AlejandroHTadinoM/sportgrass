@@ -17,8 +17,8 @@ var
 	$('.wrapper').height(navBar.height()),
 
 	menu = $('.menu'),
-	closeMenu = menu.find('#close'),
-	openMenu = navBar.find('#open-icon'),
+	menuBtn = $('#menu-btn'),
+	menuIcon = menuBtn.find('#menu-icon'),
 
 	// Parallax section --------------------
 	product = $('.product'),
@@ -154,15 +154,9 @@ $(window).scroll(function () {
 		navBar.removeClass('stk');
 	};
 });
-openMenu.click(function () {
-	menu.css({
-		'transform' : 'translateX(0%)'
-	});
-});
-closeMenu.click(function () {
-	menu.css({
-		'transform' : 'translateX(-100%)'
-	});
+menuBtn.click(function () {
+	menuIcon.toggleClass('open');
+	menu.toggleClass('menu-open');
 });
 figure.click(function () {
 	showModal($(this).find('img'));

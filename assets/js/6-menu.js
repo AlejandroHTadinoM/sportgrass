@@ -1,10 +1,4 @@
-openMenu.click(function () {
-	menu.css({
-		'transform' : 'translateX(0%)'
-	});
-});
-closeMenu.click(function () {
-	menu.css({
-		'transform' : 'translateX(-100%)'
-	});
+menuBtn.click(function () {
+	menuIcon.toggleClass('open');
+	menu.toggleClass('menu-open');
 });

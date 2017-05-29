@@ -17,8 +17,8 @@ var
 	$('.wrapper').height(navBar.height()),
 
 	menu = $('.menu'),
-	closeMenu = menu.find('#close'),
-	openMenu = navBar.find('#open-icon'),
+	menuBtn = $('#menu-btn'),
+	menuIcon = menuBtn.find('#menu-icon'),
 
 	// Parallax section --------------------
 	product = $('.product'),
