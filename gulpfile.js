@@ -1,24 +1,25 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
 
 /*********** Jade and Pug templating ***********/
-var jade = require('gulp-jade');
-var pug = require('gulp-pug');
+	jade = require('gulp-jade'),
+	pug = require('gulp-pug'),
 
 /*********** SASS and SCSS compiling ***********/
-var sass = require('gulp-sass');
+	sass = require('gulp-sass'),
 
 /*********** JS concat ***********/
-var concat = require('gulp-concat');
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify'),
 
 /*********** Static server ***********/
-var bs = require('browser-sync').create();
+	bs = require('browser-sync').create(),
 
 /*********** Path vars ***********/
-var sassSrc = 'assets/sass/';
-var jsSrc = 'assets/js/';
+	sassSrc = 'assets/sass/',
+	jsSrc = 'assets/js/';
 
-var sassDest = 'dist/css/';
-var jsDest = 'dist/js/';
+	sassDest = 'dist/css/',
+	jsDest = 'dist/js/';
 
 /*********** HTML teplating and compiling ***********/
 gulp.task('jade', function () {
@@ -30,7 +31,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('pug', function () {
-	return gulp.src('views/**/*.pug')
+	return gulp.src('views/*.pug')
 		.pipe(pug({
 			pretty: false
 		}))
@@ -55,6 +56,7 @@ gulp.task('sass', function () {
 gulp.task('concat', function () {
 	return gulp.src(jsSrc + '*.js')
 		.pipe(concat('functions.js'))
+		.pipe(uglify())
 		.pipe(gulp.dest(jsDest));
 });
 
@@ -70,7 +72,7 @@ gulp.task('serve', ['pug', 'sass', 'concat'], function () {
 /*********** Watch files ***********/
 gulp.task('watch', function () {
 	gulp.watch('views/*.jade', ['jade']);
- 	gulp.watch('views/*.pug', ['pug']);
+ 	gulp.watch('views/**/*.pug', ['pug']);
 	gulp.watch('assets/sass/**/*.sass', ['sass']);
 	gulp.watch('assets/js/*.js', ['concat']).on('change', bs.reload);
 	gulp.watch('dist/*.html').on('change', bs.reload);
