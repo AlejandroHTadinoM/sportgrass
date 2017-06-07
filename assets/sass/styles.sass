@@ -39,7 +39,7 @@ $green : #689F38
 	font-weight: 200
 
 .btn
-	padding: 1rem 1.4rem
+	padding: 1rem 1rem
 	background-color: transparent
 	border-radius: 2rem
 	margin-left: 12px
@@ -95,6 +95,14 @@ section
 	position: fixed
 	width: 100%
 	z-index: 999
+
+.icon
+	width: 1.6em
+	margin: 0 6px 0 0
+
+	&:hover
+		color: #FAFAFA
+
 
 body
 	background-color: #F9F9F9
@@ -205,9 +213,26 @@ header
 	overflow: hidden
 	text-align: left
 
+	figure
+		margin: 0
+		position: relative
+
+		figcaption
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			z-index: 2
+			text-align: center
+			padding: 2rem
+			font-size: 2em
+			font-weight: 300
+			color: #FAFAFA
+			text-transform: uppercase
+
 	.slider
 		width: 100%
-		background: linear-gradient(rgba(#DBB13B, .6), rgba(#2494A2, .4))
+		background: linear-gradient(rgba(#212121, .6), rgba(#212121, .4))
 		z-index: 10
 		height: 100%
 

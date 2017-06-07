@@ -842,7 +842,7 @@ hr {
   font-weight: 200; }
 
 .btn {
-  padding: 1rem 1.4rem;
+  padding: 1rem 1rem;
   background-color: transparent;
   border-radius: 2rem;
   margin-left: 12px; }
@@ -895,6 +895,12 @@ section {
   position: fixed;
   width: 100%;
   z-index: 999; }
+
+.icon {
+  width: 1.6em;
+  margin: 0 6px 0 0; }
+  .icon:hover {
+    color: #FAFAFA; }
 
 body {
   background-color: #F9F9F9;
@@ -983,9 +989,24 @@ header {
   height: 80vh;
   overflow: hidden;
   text-align: left; }
+  .slider-container figure {
+    margin: 0;
+    position: relative; }
+    .slider-container figure figcaption {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+      font-size: 2em;
+      font-weight: 300;
+      color: #FAFAFA;
+      text-transform: uppercase; }
   .slider-container .slider {
     width: 100%;
-    background: linear-gradient(rgba(219, 177, 59, 0.6), rgba(36, 148, 162, 0.4));
+    background: linear-gradient(rgba(33, 33, 33, 0.6), rgba(33, 33, 33, 0.4));
     z-index: 10;
     height: 100%; }
     .slider-container .slider .slides {
