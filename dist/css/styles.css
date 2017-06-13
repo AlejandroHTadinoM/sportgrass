@@ -802,3 +802,34 @@ footer {
   footer .place {
     padding-top: 1rem;
     color: #FAFAFA; }
+
+.img-group .service-img-1,
+.img-group .service-img-2 {
+  max-width: 80%;
+  background-color: #EEE;
+  padding: 1.4rem;
+  border-radius: 6px; }
+
+.lay-l .service-img-1 {
+  transform: translate(0, 0); }
+
+.lay-l .service-img-2 {
+  transform: translate(120px, -120px);
+  z-index: 2; }
+
+.lay-r .service-img-1 {
+  transform: translate(0, 0); }
+
+.lay-r .service-img-2 {
+  transform: translate(-120px, -120px);
+  z-index: 2; }
+
+.service-title {
+  text-align: center; }
+  .service-title:after {
+    content: '';
+    display: block;
+    margin: 1rem auto;
+    width: 30%;
+    height: 1px;
+    background-color: #EEE; }
