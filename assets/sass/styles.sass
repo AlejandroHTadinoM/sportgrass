@@ -1,217 +1,109 @@
 //==================== Imports ====================
-@import "normalize"
-@import "skeleton"
+@import "flexboxgrid"
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900')
 
 //==================== Vars ====================
 $acc : #9CCC65
-$green : #689F38
+$green : #38BE95
+$green-dark: #0F272F
+$green-lighter: #F2FEF7
+$green-ligth: #C5D8D6
+$white: #FAFAFA
 
 //==================== Helpers ====================
 
-.menu
-	display: none
+*
+	margin: 0
+	padding: 0
 
-.open
-	width: 0px !important
+body
+	font-family: 'Lato', sans-serif
+	color: #444
+	background-color: $white
+
+.container
+	margin: auto
+
+.text-acc
+	color: #38BE95
+	font-weight: 300
+
+.text-strong
+	color: #38BE95
+	font-weight: 700
+
+.sub-title
+	font-weight: 700
+	font-size: 2em
+	text-align: center
+
+	&:after
+		content: ''
+		display: block
+		width: 20%
+		height: 2px
+		margin: 1rem auto
+		background-color: $green
+
+//==================== Skew Divs ====================
+.chevron
+	width: 100%
+	height: 100px
+	content: ''
+	display: block
+	overflow: hidden
+	position: relative
+	top: -50px
+	z-index: 10
 
 	&:before,
 	&:after
-		width: 50px !important
-		transform-origin: 60%
-	&:after
-		transform: rotate(45deg)
-	&:before
-		transform: rotate(-45deg)
-
-.menu-open
-	transform: translateX(0) !important
-
-.text-left
-	text-align: left
-
-.text-right
-	text-align: right
-
-.text-center
-	text-align: center
-
-.text-light
-	font-weight: 200
-
-.btn
-	padding: 1rem 1rem
-	background-color: transparent
-	border-radius: 2rem
-	margin-left: 12px
-
-	&:nth-child(1)
-		margin-left: 0
-
-.sub-title
-	text-align: center
-	margin: 0 auto
-	padding-top: 2rem
-	font-weight: 700
-	color: $green
-
-	&:after
-		display: block
+		width: 51%
+		height: 100px
 		content: ''
-		width: 20%
-		height: 2px
-		background-color: $acc
-		margin: .8rem auto 1rem
+		display: block
+		position: absolute
+		background-color: $white
 
-section
-	padding-top: 6rem
-	background-color: #F9F9F9
+	&:before
+		left: 0
+		bottom: 0
+		transform: rotate(6deg)
 
-.page-lead
-	text-align: center
-	font-weight: 700
-	text-transform: uppercase
-
-.card
-	box-sizing: border-box
-	width: 100%
-	padding: 3rem
-	margin-bottom: 4rem
-	box-shadow: 0 3px 6px rgba(0, 0, 0, .6)
-	border-bottom: 4px solid transparent
-	transition: all .4s ease-in-out
-
-	&:hover
-		color: #212121
-		box-shadow: 0 12px 24px rgba(0, 0, 0, .6)
-		border-bottom: 4px solid $acc
-
-.stk
-	position: fixed
-	width: 100%
-	z-index: 999
-	box-shadow: 0px 4px 3px 1px rgba(0, 0, 0, .4)
-
-.wrapper
-	position: fixed
-	width: 100%
-	z-index: 999
-
-.icon
-	width: 1.6em
-	margin: 0 6px 0 0
-
-	&:hover
-		color: #FAFAFA
-
-
-body
-	background-color: #F9F9F9
-	color: #64777D
-
-//==================== Modal ====================
-.modal
-	display: none
-	position: fixed
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	z-index: 2
-	background: #212121
-	padding-top: 100px
-	cursor: pointer
-
-	.modal-container
-		width: 100%
-		text-align: center
-
-		img
-			width: 90%
-			margin: 0 auto
-			
-
-		p
-			color: #FAFAFA
-			text-align: center
-			text-transform: uppercase
+	&:after
+		right: 0
+		bottom: 0
+		transform: rotate(-6deg)
 
 //==================== Header ====================
 header
-	text-align: center
+	background: transparent
+
+	.logo
+		max-width: 100%
 
 	.header-bar
-		background-color: #FAFAFA
-	
-		.brand
-			text-align: left
-			margin: 1rem 0
 
-			img
-				width: 100%
-
-		.sns
-			margin-top: 1rem
-
-			ul
-				list-style: none
-				margin-bottom: 0
-				font-size: 1.2em
-
-				li
-					display: inline-block
-					margin-left: 1rem
-					font-size: 2em
-					vertical-align: -.7rem
-					vertical-align: -webkit-baseline-middle
-
-				#facebook-icon
-					color: #3b5998
-
-				#youtube-icon
-					color: #e52d27
-
-				#twitetr-icon
-					color: #326ada
-
-			.bar
-				display: inline-block
-				border-right: 1px solid $acc
-				padding-right: 1rem
-				height: 100%
-
-		.cta
-			text-align: right
-			margin: 1.5rem 0 0 0
-
-			.btn
-				text-align: center
-				background-color: #FAFAFA
-				color: $acc
+		nav
+			a
 				text-decoration: none
-				font-weight: 700
 				text-transform: uppercase
-				display: inline-block
-				border: 1px solid $acc
-				width: 35%
-				margin-left: 1em
-				font-size: .8em
-				padding: 1rem
-				transition: all .4s ease-in-out
-
-				&:first-child
-					margin-left: 0
+				color: $green
+				width: 100%
+				height: 100%
+				padding: 1rem 2rem
+				transition: all .2s ease-in-out
 
 				&:hover
-					color: #FAFAFA
-					background-color: $acc
+					background-color: $green
+					color: $white
+
 
 //==================== Slider ====================
 .slider-container
 	width: 100%
-	height: 50vh
 	height: 80vh
 	overflow: hidden
-	text-align: left
 
 	figure
 		margin: 0
@@ -227,14 +119,14 @@ header
 			padding: 2rem
 			font-size: 2em
 			font-weight: 300
-			color: #FAFAFA
+			color: $white
 			text-transform: uppercase
 
 	.slider
 		width: 100%
+		height: 100%
 		background: linear-gradient(rgba(#212121, .6), rgba(#212121, .4))
 		z-index: 10
-		height: 100%
 
 		.slides
 			width: calc(1920px * 7)
@@ -244,7 +136,6 @@ header
 				display: inline-block
 				margin: 0
 				width: 100%
-				display: inline-block
 
 				img
 					margin: 0
@@ -255,432 +146,67 @@ header
 					right: 0
 					bottom: 0
 
-//==================== Navbar ====================
-.main-nav
-	text-align: center
-	background-color: $green
-	padding: 2rem
-
-	.nav-item
-		width: 100%
-		overflow: hidden
-		letter-spacing: .1rem
-
-	.nav-btn
-		width: 100%
-		display: block
-		background-color: transparent
-		color: rgba(255, 255, 255, .7)
-		text-decoration: none
-		text-transform: uppercase
-		text-align: center
-		font-weight: 600
-		border-bottom: solid 2px transparent
-		transition: all .4s ease-in-out
-
-		&:after
-			display: block
-			content: ''
-			margin: 1em auto 0
-			width: 0%
-			height: 2px
-			background-color: #FAFAFA
-			transition: all .4s ease-in-out
-
-		&:hover
-			color: #FFF
-
-			&:after
-				width: 60%
-
 //==================== Home ====================
-.home
-	margin-top: 2rem
-
-	.home-pre
-		text-align: center
-
-//==================== Video ====================
-.section-video
-	background: radial-gradient(circle, #FAFAFA, #DEE6DD)
-
-	.video-container
-		margin-top: 6rem
-		position: relative
-		height: 0
-		padding-bottom: 56.25%
-		padding-top: 25px
-
-		.video
-			iframe
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-
-//==================== About ====================
 .section-about
-	background-color: #FAFAFA
-	padding: 4rem 0
 
 	.about
-		width: 80%
-		margin: 0 auto
-		font-weight: 300
 		text-align: center
 
-//==================== Grass ====================
 .section-grass
-	background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .4)), url("../img/section-bg.jpg")
-		position: center
-		attachment: fixed
-		size: cover
-	color: #FAFAFA
+	border: 1px solid #EEE
+	margin: 4rem
+	padding: 2rem
 
-	h4
-		font-size: 1.3em
-
-	p
-		font-size .8em
-		font-weight: 300
-
-	.grass 
-		img
-			width: 100%
-			margin: 0 auto
-
-//==================== Service ====================
-.product
-
-	.service-description
-		transform: translateY(60px)
-
-		p
-			margin-bottom: 1rem
-
-		.service-title
-			text-align: center
-			transition: color .4s ease-in-out
-
-			&:after
-				content: ''
-				display: block
-				background-color: $acc
-				width: 0
-				height: 2px
-				margin: 1rem auto
-				transition: all .4s ease-in-out
-			
-			&:hover
-				color: darken($acc, 20%)
-
-				&:after
-					width: 80%
-		p
-			font-weight: 100
-
-	.bg-cl
-		background: radial-gradient(circle at bottom, #DEE6DD, #F9F9F9)
-			position: bottom
-
-	.img-group
-		position: relative
-		margin-bottom: 22rem
-		width: 100%
-
-		img
-			max-width: 100%
-
-		.service-img-1,
-		.service-img-2
-			position: relative
-			padding: 1rem
-			background-color: #FAFAFA
-			box-shadow: 4px 4px 12px rgba(0, 0, 0, .3)
-
-	.lay-l
-		text-align: right
-
-		.service-img-1
-			top: 60px
-			left: 120px
-			z-index: 2
-
-		.service-img-2
-			top: 0
-			right: 0
-
-	.lay-r
-		.service-img-1
-			top: 0
-			left: 0
-
-		.service-img-2
-			top: -60px
-			left: -120px
-			z-index: 2
-
-//==================== Gallery ====================
-.gallery
-	background-color: #F9F9F9
-
-	figure
-		margin: 2rem 0
-		width: 100%
-		height: 200px
-		overflow: hidden
-		position: relative
-		cursor: pointer
-
-		&:hover
-
-			img
-				filter: blur(1px)
-				transform: scale(.98)
-
-			figcaption
-				top: 50%
-				left: 0
-				width: 100%
-				opacity: 1
-
-		img
-			position: absolute
-			top: 0
-			left: 0
-			width: 100%
-			height: 100%
-			transition: all .3s ease-in-out
-
-		figcaption
-			box-sizing: border-box
-			background-color: #FAFAFA
-			padding: 1rem
-			text-align: center
-			position: absolute
-			top: 100%
-			left: 50%
-			width: 0
-			opacity: 0
-			height: 100%
-			transition: all .4s ease-in-out
-
-//==================== Evergreen ====================
-.evergreen
-	.eg-text
+	.grass-text
 		text-align: center
+		position: relative
 
-		h2
-			font-size: 2em
-			font-weight: 400
+		.grass-icon
+			max-width: 64px
 
-.bg-img
-	background-color: #F9F9F9
-	background: radial-gradient(circle, rgba(0, 0, 0,  .6), rgba(0, 0, 0, .2)), url("/img/section-bg.jpg")
+.section-description
+	background: url('/img/section-bg.jpg')
 		size: cover
 		position: center
-		attachment: fixed
-	color: #FAFAFA
-
-//==================== Contact ====================
-.contact
 	height: 60vh
+
+.box
+	background-color: $white
+	margin-top: 10%
+	width: 100%
+	border-radius: 8px
+	padding: 2rem
+	box-shadow: 4px 8px 20px 2px rgba(0, 0, 0, .6)
 
 //==================== Footer ====================
 footer
-	padding: 4rem 0
-	background-color: #002d26
-	color: #FAFAFA
-	text-align: center
+	background-color: #0F272F
+	height: 20vh
+
+	a
+		text-decoration: none
+		color: $green
+
+	.col-lg-4
+		border-right: 1px solid #FFF
+		height: 12vh
+		margin-top: 4vh
+
+		&:last-child
+			border-right: none
 
 	.footer-title
 		text-transform: uppercase
-		font-size: 1.2em
-		font-weight: 400
-		letter-spacing: .04em
-
-		&:after
-			display: block
-			content: ''
-			width: 40%
-			height: 1px
-			background-color: #CCC
-			margin: 8px auto
-
-	.footer-content
-		text-align: center
-
-	.footer-icon
-		color: #CCC
-		font-size: 2em
-		margin-left: 12px
-		transition: all .6s ease-in-out
-
-		&:nth-child(1)
-			margin-left: 0
-		
-		&:hover
-			color: #FFF
+		font-weight: 700
+		color: $white
 
 	.footer-link
-		color: #CCC
-		transition: all .6s ease-in-out
+		display: block
+		padding-top: 1rem
 
-/* Larger than mobile */
-@media (max-width: 425px)
+		.fa
+			margin-left: 5px
 
-	#menu-btn
-		position: absolute
-		top: 1.5rem
-		right: 3rem
-		width: 50px
-		height: 50px
-		z-index: 99
-
-		#menu-icon
-			position: absolute
-			top: 25%
-			left: 0
-			width: 50px
-			height: 4px
-			border-radius: 4px
-			background-color: #444
-			transition: all .4s ease-in-out
-
-			&:before,
-			&:after
-				content: ''
-				position: absolute
-				top: 1rem
-				left: 0
-				width: 100%
-				height: 4px
-				background: #444
-				border-radius: 4px
-				transition: all .4s ease-in-out
-			&:after
-				margin-top: 1rem
-
-	.menu
-		transform: translateX(-100%)
-		z-index: 10
-		display: inline-block
-		position: fixed
-		width: 100%
-		height: 100vh
-		padding-top: 4rem
-		top: 0
-		left: 0
-		background-color: rgba(255, 255, 255, .95)
-		transition: all .6s ease-in-out
-
-		ul
-			list-style: none
-			font-size: 2em
-			text-transform: uppercase
-			font-weight: 700
-			margin-top: 2rem
-
-			a
-				text-decoration: none
-				color: $acc
-
-				li
-					padding: 2rem 0
-
-	header
-		.header-bar
-			.sns,
-			.cta
-				display: none
-
-			.brand
-				margin: 1re 0 0
-
-				img
-					width: 50%
-	.main-nav
-		display: none
-
-	.card
-		padding: 2rem
-		margin: 0 auto 4rem
-		text-align: center
-		width: 90%
-
-	.product
-
-		.img-group
-			img
-				width: 140px
-
-		.lay-l
-			.service-img-1
-				top: 60px
-				left: 0
-
-			.service-img-2
-				top: 0
-				left: -60px
-
-		.lay-r
-			.service-img-2
-				left: 60px
-
-		.bg-img
-			.service-description
-				transform: translateY(-200px)
-
-	footer 
-		.footer-content
-			margin-bottom: 2rem
-
-/* Larger than tablet */
-@media (max-width: 768px)
-
-	.product
-
-		.img-group
-			img
-				width: 140px
-
-		.lay-l
-			.service-img-1
-				top: 60px
-				left: 0
-
-			.service-img-2
-				top: 0
-				left: -60px
-
-		.lay-r
-			.service-img-1
-				top: 60px
-
-			.service-img-2
-				left: 60px
-
-@media (max-width: 1024px)
-	
-	.product
-
-		.img-group
-			img
-				width: 280px
-
-		.lay-l
-			.service-img-1
-				top: 60px
-				left: 0
-
-			.service-img-2
-				top: 0
-				left: -60px
-
-		.lay-r
-			.service-img-1
-				top: 60px
-
-			.service-img-2
-				left: 60px
+	.place
+		padding-top: 1rem
+		color: $white
