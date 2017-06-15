@@ -1,28 +1,13 @@
 // cache DOM elements
 var
-// Grass section --------------------
-	grassSection = $('.section-grass'),
-	grass = grassSection.find('img'),
-	grassSecH = grassSection.height(),
-	grassH = grass.height(),
-
-	// Slider section --------------------
+// Slider section --------------------
 	sliderContainer = $('.slider-container'),
 	slides = sliderContainer.find('.slides'),
 	slide = slides.find('.slide'),
 	slideImg = slide.find('img');
 
-	navBar = $('.header-bar'),
-	navPos = navBar.offset().top,
-	$('.wrapper').height(navBar.height()),
-
-	menu = $('.menu'),
-	menuBtn = $('#menu-btn'),
-	menuIcon = menuBtn.find('#menu-icon'),
-
-	// Parallax section --------------------
+// Parallax effect --------------------
 	product = $('.product'),
-	service = $('.service'),
 	service1 = product.find('#service1'),
 	service2 = product.find('#service2'),
 	service3 = product.find('#service3'),

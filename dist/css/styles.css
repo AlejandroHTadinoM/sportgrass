@@ -670,6 +670,10 @@ body {
     margin: 1rem auto;
     background-color: #38BE95; }
 
+.fadeIn {
+  transform: translate(0, 0) !important;
+  opacity: 1 !important; }
+
 .chevron {
   width: 100%;
   height: 100px;
@@ -755,7 +759,7 @@ header {
   text-align: center; }
 
 .section-grass {
-  border: 1px solid #EEE;
+  border: 1px solid #EEEEEE;
   margin: 4rem;
   padding: 2rem; }
   .section-grass .grass-text {
@@ -803,10 +807,25 @@ footer {
     padding-top: 1rem;
     color: #FAFAFA; }
 
+.product .service-description {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin-bottom: 6rem; }
+  .product .service-description .service-title {
+    text-align: center;
+    font-size: 2em; }
+    .product .service-description .service-title:after {
+      content: '';
+      display: block;
+      margin: 1rem auto;
+      width: 50%;
+      height: 1px;
+      background-color: #EEEEEE; }
+
 .img-group .service-img-1,
 .img-group .service-img-2 {
   max-width: 80%;
-  background-color: #EEE;
+  background-color: #EEEEEE;
   padding: 1.4rem;
   border-radius: 6px; }
 
@@ -824,12 +843,51 @@ footer {
   transform: translate(-120px, -120px);
   z-index: 2; }
 
-.service-title {
-  text-align: center; }
-  .service-title:after {
-    content: '';
-    display: block;
-    margin: 1rem auto;
-    width: 30%;
-    height: 1px;
-    background-color: #EEE; }
+.service {
+  opacity: 0;
+  transition: all .4s ease-in-out; }
+  .service:nth-child(odd) {
+    transform: translate(-100%, 0); }
+    .service:nth-child(odd) p {
+      text-align: left; }
+  .service:nth-child(even) {
+    transform: translate(100%, 0); }
+    .service:nth-child(even) p {
+      text-align: right; }
+
+.gallery .modal {
+  display: none;
+  background: radial-gradient(circle, rgba(197, 216, 214, 0.9), #f2fef7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow: scroll; }
+  .gallery .modal .modal-container {
+    width: 100%;
+    position: relative; }
+    .gallery .modal .modal-container .modal-img {
+      width: 100%;
+      margin: 60px auto; }
+    .gallery .modal .modal-container .modal-text {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700; }
+
+.gallery figure {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+  .gallery figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    background-color: pink; }
+
+.gallery .gallery-img {
+  margin: 0 auto;
+  width: 100%; }
