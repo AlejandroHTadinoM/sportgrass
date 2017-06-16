@@ -891,3 +891,41 @@ footer {
 .gallery .gallery-img {
   margin: 0 auto;
   width: 100%; }
+
+.evergreen .eg-container {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); }
+  .evergreen .eg-container:hover .eg-text {
+    top: 20%;
+    box-shadow: 0 6px 3px rgba(0, 0, 0, 0.4); }
+  .evergreen .eg-container:hover .eg-img img {
+    filter: blur(0px);
+    transform: scale(1.1); }
+  .evergreen .eg-container .eg-text {
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    padding: 1rem;
+    margin: auto;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #FAFAFA;
+    border-radius: 6px;
+    transition: top .4s ease-in-out; }
+  .evergreen .eg-container .eg-img {
+    position: relative; }
+    .evergreen .eg-container .eg-img img {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      filter: blur(6px);
+      transition: all .4s ease-in-out; }
