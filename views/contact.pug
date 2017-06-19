@@ -3,18 +3,18 @@ block content
 
 	section.contact#contact
 		.container
-			.row
-				form(action="process.php", id="formulario", method="POST")
-					.four.columns
-						label(for="nombre") Nombre
-						input(type="text", required, name="nombre", placeholder="Inserte su nombre")
-						label(for="email") Asunto
-						input(type="text", required, placeholder="Inserte el asunto del mensaje", name="asunto")
-						label(for="email") E-mail
-						input(type="email", required, placeholder="Ingrese su dirección de E-mail", name="email")
-					.six.columns
-						label(for="email") Mensaje
-						textarea(name="mensaje", rows="8", required placeholder="Deje su mensaje")
-					.two.columns
-						input(type="reset", class="reset", value="Borrar Todo").contact-btn
-						input(type="submit", class="enviar", value="Enviar").contact-btn
+			
+			form(action="process.php", id="formulario", method="POST").row
+				.col-xs-12.col-sm-4.col-md-4.col-lg-4
+					label(for="nombre") Nombre
+					input(type="text", required, name="nombre", placeholder="Inserte su nombre")
+					label(for="email") Asunto
+					input(type="text", required, placeholder="Inserte el asunto del mensaje", name="asunto")
+					label(for="email") E-mail
+					input(type="email", required, placeholder="Ingrese su dirección de E-mail", name="email")
+				.col-xs-12.col-sm-6.col-md-6.col-lg-6
+					label(for="email") Mensaje
+					textarea(name="mensaje", rows="8", required placeholder="Deje su mensaje")
+				.col-xs-12.col-sm-2.col-md-2.col-lg-2
+					input(type="reset", class="reset", value="Borrar Todo").contact-btn
+					input(type="submit", class="enviar", value="Enviar").contact-btn

@@ -738,7 +738,7 @@ header {
     margin: 2rem auto;
     padding: 1rem 2rem;
     background-color: #FAFAFA;
-    border-radius: .2em;
+    border-radius: 3rem;
     color: #38BE95;
     text-decoration: none;
     font-weight: 700;
@@ -774,7 +774,7 @@ header {
   .slider-container .slider {
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(56, 190, 149, 0.7), rgba(56, 190, 149, 0.7));
+    background: linear-gradient(rgba(56, 190, 149, 0), rgba(56, 190, 149, 0.7));
     z-index: 10; }
     .slider-container .slider .slides {
       width: calc(1920px * 7);
@@ -809,9 +809,10 @@ header {
       max-width: 64px; }
 
 .section-description {
-  background: linear-gradient(rgba(15, 39, 47, 0.8), rgba(15, 39, 47, 0.8)), url("/img/section-bg.png");
+  background: linear-gradient(rgba(15, 39, 47, 0.9), rgba(15, 39, 47, 0.9)), url("/img/section-bg.png");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
   height: 100vh; }
 
 .box {
@@ -828,7 +829,7 @@ footer {
     text-decoration: none;
     color: #38BE95; }
   footer .col-lg-4 {
-    border-right: 1px solid #FFF;
+    border-right: 1px solid rgba(250, 250, 250, 0.6);
     height: 12vh;
     margin-top: 4rem; }
     footer .col-lg-4:last-child {
@@ -845,6 +846,9 @@ footer {
   footer .place {
     margin-top: .5em;
     color: #FAFAFA; }
+
+.product .service {
+  padding-top: 3rem; }
 
 .product .service-description {
   font-weight: 300;
@@ -866,7 +870,8 @@ footer {
   max-width: 80%;
   background-color: #EEEEEE;
   padding: 1.4rem;
-  border-radius: 6px; }
+  border-radius: 6px;
+  box-shadow: 0 0.5em 16px rgba(0, 0, 0, 0.3); }
 
 .lay-l .service-img-1 {
   transform: translate(0, 0); }
@@ -893,6 +898,13 @@ footer {
     transform: translate(100%, 0); }
     .service:nth-child(even) p {
       text-align: right; }
+
+.bg-cl {
+  background: linear-gradient(135deg, #FAFAFA 30%, #C5D8D6); }
+
+.bg-img {
+  background: linear-gradient(45deg, rgba(250, 250, 250, 0.9), #C5D8D6 70%), url("../img/section-bg.png");
+    background-attachment: fixed; }
 
 .gallery .modal {
   display: none;
@@ -922,11 +934,9 @@ footer {
   margin: 1rem 0; }
   .gallery figure figcaption {
     position: absolute;
-    bottom: 0;
+    bottom: 1em;
     left: 0;
     right: 0;
-    height: 10%;
-    background-color: rgba(0, 0, 0, 0.4);
     color: #FAFAFA;
     text-align: center; }
 
