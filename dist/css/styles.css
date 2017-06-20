@@ -807,7 +807,7 @@ header {
       max-width: 64px; }
 
 .section-description {
-  background: linear-gradient(rgba(15, 39, 47, 0.9), rgba(15, 39, 47, 0.9)), url("/img/section-bg.png");
+  background: linear-gradient(rgba(15, 39, 47, 0.9), rgba(15, 39, 47, 0.9)), url("../img/section-bg.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
