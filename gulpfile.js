@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 
 /*********** SASS and SCSS compiling ***********/
 	sass = require('gulp-sass'),
+	purify = require('gulp-purifycss'),
 
 /*********** JS concat ***********/
 	concat = require('gulp-concat'),
@@ -31,7 +32,7 @@ gulp.task('jade', function () {
 });
 
 gulp.task('pug', function () {
-	return gulp.src('views/*.pug')
+	return gulp.src('views/**/*.pug', {base: 'views/_includes'})
 		.pipe(pug({
 			pretty: false
 		}))
@@ -48,6 +49,7 @@ gulp.task('sass', function () {
 			ouputStyle: 'compressed'
 		})
 		.on('error', sass.logError))
+		.pipe(purify(['dist/**/*.js', 'dist/**/*.html']))
 		.pipe(gulp.dest(sassDest))
 		.pipe(bs.stream());
 });
@@ -79,4 +81,4 @@ gulp.task('watch', function () {
 });
 
 /*********** Default task ***********/
-gulp.task('default', ['watch', 'serve']);
+gulp.task('default', ['serve', 'watch']);
