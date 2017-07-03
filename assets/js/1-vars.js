@@ -21,7 +21,12 @@ var
 	gallery = $('.gallery'),
 	figure = gallery.find('figure'),
 	modal = $('.modal'),
-	modalImg = $('.modal-img');
+	modalImg = $('.modal-img'),
+
+// Menu --------------------
+	menuBtn = $('.btn'),
+	menuContainer = $('.header-menu'),
+	menu = menuContainer.find('.container');
 
 // settings for slider
 var
