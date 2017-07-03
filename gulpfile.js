@@ -30,7 +30,7 @@ var gulp = require('gulp'),
 	viewsCache = 'cache/',
 	sassSrc = 'assets/sass/*.sass',
 	jsSrc = 'assets/js/*.js',
-	imgSrc = 'imgSrc/**/*.+(jpg|png|gif)',
+	imgSrc = 'img/**/*.+(jpg|png|gif)',
 
 	viewsDest = 'dist/',
 	sassDest = 'dist/css/',
@@ -122,7 +122,7 @@ gulp.task('watch', function () {
  	gulp.watch('views/**/*.pug', ['pug']);
 	gulp.watch('assets/sass/**/*.sass', ['sass']);
 	gulp.watch('assets/js/*.js', ['concat']).on('change', bs.reload);
-	gulp.watch('imgSrc/**/*.*', ['img']).on('change', bs.reload);
+	gulp.watch('img/**/*.*', ['img']).on('change', bs.reload);
 	gulp.watch('dist/*.html').on('change', bs.reload);
 });
 
