@@ -30,7 +30,7 @@ var gulp = require('gulp'),
 	viewsCache = 'cache/',
 	sassSrc = 'assets/sass/*.sass',
 	jsSrc = 'assets/js/*.js',
-	imgSrc = 'img/**/*.+(jpg|png|gif)',
+	imgSrc = 'img/**/*.+(jpg|png|gif|svg)',
 
 	viewsDest = 'dist/',
 	sassDest = 'dist/css/',

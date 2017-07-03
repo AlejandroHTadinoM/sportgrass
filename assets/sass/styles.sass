@@ -244,10 +244,6 @@ header
 footer
 	background-color: $green-dark
 
-	a
-		text-decoration: none
-		color: $green
-
 	.col-lg-4
 		border-right: 1px solid rgba($white, .6)
 		height: 12vh
@@ -262,6 +258,8 @@ footer
 		color: $white
 
 	.footer-link
+		text-decoration: none
+		color: $green
 		display: block
 		margin-top: .5em
 
@@ -272,6 +270,25 @@ footer
 		margin-top: .5em
 		color: $white
 
+	.clicnovo
+		color: $white
+		text-decoration: none
+		margin-top: 1rem
+		padding: 1rem
+		display: block
+
+		&:after
+			content: ''
+			display: block
+			width: 0
+			height: 2px
+			margin: .5em auto
+			background-color: $white
+			transition: width .2s ease
+
+		&:hover
+			&:after
+				width: 20%
 //==================== Product ====================
 .product
 	.service
@@ -299,7 +316,7 @@ footer
 	.service-img-1,
 	.service-img-2
 		max-width: 80%
-		background-color: $line
+		background-color: $white
 		padding: 1.4rem
 		border-radius: 6px
 		box-shadow: 0 .5em 16px rgba(0, 0, 0, .3)
