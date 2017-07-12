@@ -508,6 +508,9 @@ footer
 
 @media only screen and (max-width: 48em)
 	header
+		.open
+			left: 0 !important
+
 		.header-bar
 			display: none
 
@@ -519,6 +522,7 @@ footer
 			height: 100vh
 			background: $white
 			z-index: 99
+			transition: all .2s ease
 
 			.container
 				position: relative
@@ -554,8 +558,8 @@ footer
 			position: fixed
 			top: 5%
 			left: 76%
-			width: 64px
-			height: 64px
+			width: 32px
+			height: 32px
 			z-index: 9999
 			cursor: pointer
 			background-color: $green
